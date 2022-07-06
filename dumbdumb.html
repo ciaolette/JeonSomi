@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head profile="http://www.w3.org/2005/10/profile">
+    <link rel="icon" type="image/png" href="https://cdn.shopify.com/s/files/1/0601/7001/0793/files/Favicon_0caf7392-7624-49e6-88f4-df8733cbdb5b_small.png?v=1634740398">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dumb Dumb Cropped Black T-Shirt</title>
+    <link href="cherry.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4ee684e442.js" crossorigin="anonymous"></script>
+  
+</head>
+<body>
+  <a href="index.html"> <header class="header">
+        <img src="https://cdn.shopify.com/s/files/1/0601/7001/0793/files/SOMI-XOXO-LOGO-Holo_2324593f-b72e-48f3-a80d-fb17bbaf4ee6_x300.png?v=1634735409" width="13%">
+      </header></a>
+<!------------------------------------->
+<div class="slideshow-container">
+
+    <div class="mySlides">
+      <img src="https://cdn.shopify.com/s/files/1/0601/7001/0793/products/croppedTeefront.png?v=1635381364" style="width:50%">
+    </div>
+    
+    <div class="mySlides">
+        <img src="https://cdn.shopify.com/s/files/1/0601/7001/0793/products/CroppedTeeBack.png?v=1635381364" style="width:50%">
+      </div>
+</div>
+    <a class="prev1" onclick="plusSlides(-1)"><i class="fa-solid fa-angles-left"></i></a>
+    <a class="next1" onclick="plusSlides(1)"><i class="fa-solid fa-angles-right"></i></a>
+    
+    </div>
+
+<!------------------------------------------------->
+<div class="somRight" style="margin-right: -4rem;">
+    <h2 style="margin-top: 10rem; width: 50%;">DUMB DUMB CROPPED BLACK T-SHIRT</h2>
+    <p style="font-weight: 600; font-size: 18px; margin-left: 6rem; margin-top: -1rem;">$35.00</p>
+    <div class="boxes2"  id="mydiv">
+        <div class="white">
+       <p>Size</p>
+    </div>
+        <span class="s1 active">
+            <p>XS/S</p>
+        </span>
+        <span class="s1">
+            <p>M/L</p>
+        </span></div>
+        <br>
+       <br><div class="number-input" style="margin-top: -5em;">
+        <p>Quantity</p>
+        <input class="quantity" min="1" name="quantity" value="1" type="number">
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepDown()" class="minus" style="margin-left: 1rem; margin-right: -1rem;"></button>
+        <button onclick="this.parentNode.querySelector('input[type=number]').stepUp()" class="plus"></button>
+      </div>
+<div class="cart">
+   <button id="btn"><h3 style="margin-top: -20px;">ADD TO CART</h3></button>
+</div>
+    <div class="ship">
+        <p style="font-weight: 600; color: black;">Ships on July 7, 2022</p>
+        <p style="margin-top: 1em; width: 27em;">Black cropped t-shirt, featuring “DUMB DUMB” on the front, and JEON SOMI’s logo on the back.</p>
+             <p>52/48 Combed Ringspun Cotton/Polyester Jersey</p>
+    </div>
+</div>
+
+<br><br><br><br>
+<div class="socials" style="margin-left: 32em;">
+    <a href="https://www.facebook.com/somsomi.official/"class="socials"><i class="fa-brands fa-facebook"></i></a>
+    <a href="https://twitter.com/somi_official_?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor"class="socials"><i class="fa-brands fa-twitter"></i></a>
+    <a href="https://www.instagram.com/somsomi0309/"class="socials"><i class="fa-brands fa-instagram"></i></a>
+    <a href="https://youtu.be/H8kqPkEXP_E"class="socials"><i class="fa-brands fa-youtube"></i></a>
+    <a href="https://music.apple.com/us/artist/somi/1218803768"class="socials"><i class="fa-brands fa-apple"></i></a>
+    <a href="https://open.spotify.com/artist/7zYj9S9SdIunYCfSm7vzAR?autoplay=true"class="socials"><i class="fa-brands fa-spotify"></i></a>
+    <a href="https://www.tiktok.com/@somi_official_?lang=en"class="socials"><i class="fa-brands fa-tiktok"></i></a>
+</div>
+<div class="footer">
+    <img src="https://cdn.shopify.com/s/files/1/0601/7001/0793/files/3_Bandaid2_500x.png?v=1633710332" width="28%">
+    <p>© 2022 JEON SOMI Official Store. All Rights Reserved.</p>
+</div>
+
+
+<script>
+    var header = document.getElementById("mydiv");
+var btns = header.getElementsByClassName("s1");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function() {
+  var current = document.getElementsByClassName("active");
+  current[0].className = current[0].className.replace(" active", "");
+  this.className += " active";
+  });
+}
+
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+    
+<br><br>
+</body>
+<script src="script.js"></script>
+</html>
